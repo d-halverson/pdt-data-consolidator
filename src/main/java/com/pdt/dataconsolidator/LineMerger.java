@@ -5,17 +5,27 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.HashSet;
 
+/**
+ * The LineMerger is responsible for reading from all the files in a MultipleFileReader simultaneously and merging the
+ * unique lines into a single output file. Uses a HashSet to track seen lines and only write unique ones.
+ */
 public class LineMerger {
     private final MultipleFileReader reader;
     private final BufferedWriter writer;
 
+    /**
+     * Constructor for LineMerger that accepts a MultipleFileReader to read from the input directory, and a BufferedWriter
+     * to write to the output file.
+     * @param reader initialized to read from input directory
+     * @param writer to write to the output file
+     */
     public LineMerger(MultipleFileReader reader, BufferedWriter writer) {
         this.reader = reader;
         this.writer = writer;
     }
 
     /**
-     * Assumes files in MultipleFileReader
+     * Assumes files in MultipleFileReader are already in lexicographically sorted order
      * @throws IOException when unexpected I/O error occurs
      */
     public void merge() throws IOException {

@@ -2,6 +2,10 @@ package com.pdt.dataconsolidator;
 
 import java.io.*;
 
+/**
+ * Main entry point for the DataConsolidator project. Call the main method in the following fashion:
+ * Usage: java DataConsolidator <input_dir> <output_file>
+ */
 public class DataConsolidator {
     public static void main(String[] args) {
         if (args.length != 2) {
