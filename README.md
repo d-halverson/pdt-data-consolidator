@@ -20,6 +20,10 @@ javac -d bin src/main/java/com/pdt/dataconsolidator/*.java
 ```
 java -cp bin com.pdt.dataconsolidator.DataConsolidator <input_dir> <output_file>
 ```
+Example run command:
+```
+java -cp bin com.pdt.dataconsolidator.DataConsolidator src/test/resources/given-test-case output.txt
+```
 
 ## Approach 
 When considering approaches to this problem, I decided to favor runtime complexity and readability of code over space complexity. I also decided to put a lower priority on how well it scales with the number of files in the input directory, because in many real world scenarios the number of files won't get extremely large where this would be a bottleneck. This led me to the following approach.
