@@ -47,3 +47,13 @@ There are `k` pointers to each file, so we need `k` space to read all files simu
 
 ## Testing
 The main testing is done in `DataConsolidatorTest`, where I have several test cases reading from test directories in the `resources` folder. I wrote these tests in a readable and modular way, so that new cases can be added by simply adding an item to the input and output arrays. A for loop then iterates over all the inputs and compares the output to the expected output.
+
+Some examples of test cases I covered:
+- The given test case from the assignment
+- Invalid input directory
+- Files with only empty lines
+- Directory with only one file
+- Multiple files
+- Many lines
+- Many lines with one of the files containing no unique lines
+- Case sensitivity (APPLE and apple should both be unique and written to the output)
